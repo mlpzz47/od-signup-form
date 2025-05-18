@@ -1,0 +1,129 @@
+/* CSS Reset based in Josh Comeau's work (https://www.joshwcomeau.com/css/custom-css-reset/) MIT License */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+body {
+    --main-color:#BB7E4B;
+    --secondary-color:#9C8265;
+    --letter-color: #000;
+    font-family: sans-serif;
+    background-color: #efefef;
+}
+
+.content-wrapper {
+    display: flex;
+    height: 100dvh;
+    width: 100dvw;
+}
+
+aside {
+    background: url(img/stairs-claudioSchwarz1440.jpg) center center / cover;
+    color: #fff;
+    width: 35%;
+}
+
+main {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info {
+    font-size: 1.4rem;
+    width: 85%;
+    padding-left: 40px;
+    margin-bottom: 40px;
+}
+
+.form-title {
+    margin-bottom: 20px;
+}
+
+.signup-main-section {
+    background-color: #fff;
+    padding: 20px 0 30px 40px;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
+    width: 70%;
+    gap: 20px 50px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input {
+    border: 1px solid #0004;
+    border-radius: 8px;
+    padding: 3px 12px;
+    font-size: .9rem;
+}
+
+.input:focus:invalid {
+    border: 1px solid #f00;
+}
+
+.input:focus:valid {
+    border: 1px solid #0a0;
+}
+
+.input:is(:focus,:active,:hover,::selection) {
+    border: 1px solid var(--main-color);
+    outline: none;
+}
+
+.label {
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+    color: #555;
+    font-weight: 600;
+}
