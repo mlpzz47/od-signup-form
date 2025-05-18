@@ -14,7 +14,7 @@
         </aside>
         <main>
             <p class="info">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis voluptas obcaecati neque nemo voluptatibus cum. Yeah cum<br><br> You <em>know</em> you want to.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis voluptas obcaecati neque nemo voluptatibus cum. Yeah <em>cum</em><br><br> You <em>know</em> you want to.
             </p>
             <form method="" action="#" class="signup-form">
                 <div class="signup-main-section">
@@ -22,24 +22,29 @@
                     <div class="input-grid">
                         <div class="input-container">
                             <label for="first-name" class="label">FIRST NAME</label>
-                            <input type="text" class="input" placeholder="" id="first-name" name="first-name" required>
+                            <input type="text" class="input" placeholder="" id="first-name" name="first-name" required minlength="3" maxlength="20">
                         </div>
+
                         <div class="input-container">
                             <label for="last-name" class="label">LAST NAME</label>
-                            <input type="text" class="input" placeholder="" id="last-name" name="last-name" required>
+                            <input type="text" class="input" placeholder="" id="last-name" name="last-name" required minlength="3" maxlength="20">
                         </div>
+
                         <div class="input-container">
                             <label for="email" class="label">EMAIL</label>
-                            <input type="email" class="input" placeholder="" id="email" name="email" required>
+                            <input type="email" class="input" placeholder="" id="email" name="email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                         </div>
+
                         <div class="input-container">
                             <label for="phone-number" class="label">PHONE NUMBER</label>
-                            <input type="tel" class="input" placeholder="" id="phone-number" name="phone-number" required>
+                            <input type="tel" class="input" placeholder="" id="phone-number" name="phone-number" required pattern="^\+(\d{1,4})[\s.-]?(\d{1,4})[\s.-]?(\d{1,4})[\s.-]?(\d{1,4})[\s.-]?(\d{1,4})$">
                         </div>
+
                         <div class="input-container">
                             <label for="password" class="label">PASSWORD</label>
                             <input type="password" class="input" placeholder="" id="password" name="password" required>
                         </div>
+
                         <div class="input-container">
                             <label for="confirm-password" class="label">CONFIRM PASSWORD</label>
                             <input type="password" class="input" placeholder="" id="confirm-password" name="confirm-password" required>
@@ -47,7 +52,8 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button type="submit">Create Account</button>
+                    <button type="submit" class="create-account-button">Create Account</button>
+                    <p class="login-text">Already have an account? <button type="button" class="login-button">Log in</button></p>
                 </div>
             </form>
         </main>
